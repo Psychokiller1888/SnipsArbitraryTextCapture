@@ -16,7 +16,6 @@ sessions = {}
 def onConnect(client, userData, flags, rc):
 	mqttClient.subscribe(_INTENT_ADD_TO_LIST)
 	mqttClient.subscribe(_USER_RANDOM_ANSWER)
-	mqttPublish.single('hermes/feedback/sound/toggleOn', payload=json.dumps({'siteId': 'default'}), hostname='127.0.0.1', port=1883)
 
 
 def onMessage(client, userData, message):
@@ -62,8 +61,9 @@ def onIntentNotRecognized(client, data, msg):
 
 	payload['siteId'] = siteId
 	wasMessage.payload = json.dumps(payload)
+	wasMessage.topic = 'userRandomAnswer'
 
-	onMessage('userRandomAnswer', None, wasMessage)
+	onMessage(None, None, wasMessage)
 
 
 def endTalk(sessionId, text):
