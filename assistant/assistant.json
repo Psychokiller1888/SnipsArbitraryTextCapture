@@ -1,0 +1,26 @@
+{
+  "id" : "proj_zqmW03yBOgPO",
+  "name" : "ArbitraryTextCapture",
+  "intents" : [ {
+    "id" : "Psychokiller1888:demoAddToList",
+    "type" : "registry",
+    "version" : "0.0.2",
+    "language" : "en",
+    "slots" : [ ],
+    "name" : "demoAddToList"
+  } ],
+  "createdAt" : "2018-05-08T12:07:43.372Z",
+  "language" : "en",
+  "version" : {
+    "nluModel" : "0.15.0"
+  },
+  "platform" : {
+    "type" : "raspberrypi"
+  },
+  "asr" : {
+    "type" : "snips"
+  },
+  "analyticsEnabled" : true,
+  "heartbeatEnabled" : true,
+  "hotword" : "hey_snips"
+}
